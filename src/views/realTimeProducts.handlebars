@@ -1,0 +1,38 @@
+<div>
+    <h1>Crear producto</h1>
+    <form action="">
+        <div>
+            <label for="productName" >Nombre:</label>
+            <input id="productName" type="text" alt="Ingresa nombre del producto">
+        </div>
+        <div>
+            <label for="productStock">Stock:</label>
+            <input id="productStock" type="number" alt="Ingresa stock del producto">
+        </div>
+         <div>
+            <label for="productPrice">Precio:</label>
+            <input id="productPrice" type="number" alt="Ingresa el precio del producto">
+        </div>
+        <div>
+            <label for="productCategory">Categoria:</label>
+            <input id="productCategory" type="text" alt="Ingresa la categoria del producto">
+        </div>
+         <div>
+            <label for="productImg">Imagen/URL:</label>
+            <input id="productImg" type="text" alt="Ingresa la url de imagen del producto">
+        </div>
+        <div>
+                <button id="createProduct" type="submit">Crear Producto</button>
+        </div>
+
+    </form>
+
+    <div>
+        <p id="viewProduct"></p>
+    </div>
+    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/products.js"></script>

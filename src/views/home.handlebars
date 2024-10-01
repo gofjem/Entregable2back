@@ -1,0 +1,27 @@
+<div>
+    <h1>Listado de Productos</h1>
+
+    {{!-- Renderizado de productos --}}
+     <div>
+        <ul id="productsList"></ul>
+    </div>
+
+    <script>
+  const socket = io();
+  const productsList = document.getElementById('productsList');
+
+  // Recibir productos del servidor
+  socket.on('products', (products) => {
+    productsList.innerHTML = '';
+    products.forEach(product => {
+      const li = document.createElement('li');
+      li.textContent = `${product.name} - ${product.price}`;
+      productsList.appendChild(li);
+    });
+  });
+</script>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
